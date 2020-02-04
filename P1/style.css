@@ -1,0 +1,23 @@
+body {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+}
+
+aside {
+  width: 45%;
+  opacity: 0.5;
+  background: #eee;
+}
+main {
+  float: right;
+  width: 45%;
+  margin: 2px;
+}
+
+p {
+  margin: 8px;
+  padding:15px; /*Relleno*/
+  border: 1.5px solid #2EBDB1;
+  border-radius: 25px;
+}
