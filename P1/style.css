@@ -4,9 +4,15 @@ body {
   border: none;
 }
 
+img{
+  margin: auto;
+}
+
 aside {
+  flex-direction: column;
   width: 45%;
-  opacity: 0.5;
+  /*opacity: 0.5;*/
+  /*filter: alpha(opacity=40);*/
   background: #eee;
 }
 main {
