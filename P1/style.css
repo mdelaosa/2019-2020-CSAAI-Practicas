@@ -8,17 +8,21 @@ img{
   margin: auto;
 }
 
-aside {
-  flex-direction: column;
+#izquierda {
+  float: left;
   width: 45%;
+  margin: 2px;
+  font: bold 130% monospace;
   /*opacity: 0.5;*/
   /*filter: alpha(opacity=40);*/
   background: #eee;
 }
-main {
+#derecha {
   float: right;
   width: 45%;
   margin: 2px;
+  font: bold 130% monospace;
+  background: #eee;
 }
 
 p {
