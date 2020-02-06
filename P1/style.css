@@ -11,6 +11,7 @@ body {
 }
 
 #izquierda {
+  background-color: rgba(255, 255, 255, 0.5);
   float: left;
   width: 45%;
   margin: 2px;
@@ -28,7 +29,7 @@ h3{
   margin: 2px;
   font: bold 100% monospace;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.25);
+
 }
 
 p {
