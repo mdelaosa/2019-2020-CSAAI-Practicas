@@ -5,13 +5,10 @@ body {
 }
 
 img{
-  display: block;
-<<<<<<< HEAD
-  margin-left: auto;
-  margin-right: auto;
-=======
-  margin: auto;
->>>>>>> da6931d3fc960fb2b1c371627dad742ce4b5956a
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 #izquierda {
