@@ -4,17 +4,18 @@ body {
   border: none;
 }
 
-#backgroundtrans{
-  background-color: #000000;
-  opacity: 0.5;
-  color: #004;
+body{
+  background-repeat: no-repeat;
+  
+  background-attachment: fixed;
 }
 
 #izquierda {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   float: left;
   width: 45%;
   margin: 2px;
+  border-radius: 25px;
   font: bold 100% monospace;
 }
 
