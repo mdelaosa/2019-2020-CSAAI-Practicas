@@ -8,15 +8,21 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+#resume{
+  float: left;
+  width: 25%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
 #bloques{
   float: right;
+  width: 70%;
 }
 
 #izquierda {
   background-color: rgba(255, 255, 255, 0.8);
   float: left;
-  width: 40%;
-  margin: 2px;
+  width: 45%;
+  margin: 1px;
   border-radius: 25px;
   font: bold 100% monospace;
 }
@@ -24,8 +30,8 @@ body{
 #derecha {
   background-color: rgba(255, 255, 255, 0.8);
   float: right;
-  width: 40%;
-  margin: 2px;
+  width: 45%;
+  margin: 1px;
   border-radius: 25px;
   font: bold 100% monospace;
 }
