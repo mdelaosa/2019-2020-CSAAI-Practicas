@@ -6,23 +6,27 @@ body {
 
 body{
   background-repeat: no-repeat;
-  
   background-attachment: fixed;
+}
+#bloques{
+  float: right;
 }
 
 #izquierda {
   background-color: rgba(255, 255, 255, 0.8);
   float: left;
-  width: 45%;
+  width: 40%;
   margin: 2px;
   border-radius: 25px;
   font: bold 100% monospace;
 }
 
 #derecha {
+  background-color: rgba(255, 255, 255, 0.8);
   float: right;
-  width: 45%;
+  width: 40%;
   margin: 2px;
+  border-radius: 25px;
   font: bold 100% monospace;
 }
 
