@@ -2,24 +2,26 @@ body {
   padding: 10px;
   margin: 10px;
   border: none;
-}
-
-body{
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-attachment: fixed;
 }
+
 #resume{
   float: left;
   width: 25%;
+  border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.8);
 }
 #bloques{
   float: right;
   width: 70%;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+
 }
 
 #izquierda {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.15);
   float: left;
   width: 45%;
   margin: 1px;
@@ -28,7 +30,7 @@ body{
 }
 
 #derecha {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.15);
   float: right;
   width: 45%;
   margin: 1px;
@@ -40,11 +42,9 @@ h3{
   margin: 2px;
   font: bold 100% monospace;
   z-index: 2;
-
 }
 
 p {
-  background-color: rgba(0, 0, 0, 0.25);
   font: bold 100% monospace;
   margin: 8px;
   padding:15px; /*Relleno*/
