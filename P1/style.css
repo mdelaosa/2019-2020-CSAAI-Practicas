@@ -12,28 +12,34 @@ body {
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.8);
 }
+
+#boton{
+  margin: 15px;
+  justify-content:center;
+}
+
 #bloques{
   float: right;
   width: 70%;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.8);
-
 }
 
 #izquierda {
   float: left;
   width: 45%;
   margin: 1px;
-  border-radius: 25px;
-  font: bold 100% monospace;
+  /*border-radius: 25px;*/
 }
 
 #derecha {
   float: right;
   width: 45%;
   margin: 1px;
-  border-radius: 25px;
-  font: bold 100% monospace;
+  /*border-radius: 25px;*/
+}
+#frases{
+  margin: 1px;
 }
 
 h3{
