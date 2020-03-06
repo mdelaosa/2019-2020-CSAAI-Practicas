@@ -10,7 +10,6 @@ div{
   float: auto;
   width: 300px;
   border-radius: 15px;
-  background-color: rgba(255, 255, 5, 0.8);
   margin: auto;
 }
 #numbers{
@@ -23,10 +22,13 @@ div{
   float: right;
   width: 50%;
 }
+#equal{
+  width: 90px;
+}
 button{
   width: 45px;
   height: 45px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(10, 10, 10, 0.9);
   color: #E0FFFF;
   font-family: Verdana;
   border-radius: 15px 5px 15px 5px;
@@ -37,7 +39,7 @@ p{
   width: 200px;
   height: 40px;
   border-color: black;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(30, 30, 30, 0.75);
   color: #E0FFFF;
   font-family: Verdana;
   font-size: 30px;
