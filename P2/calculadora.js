@@ -21,7 +21,7 @@
 
  // Operadores
 for (i=0; i<operator.length; i++){
-  operadores[i].onclick = (ev) =>{
+  operator[i].onclick = (ev) =>{
     if (display.innerHTML == "0"){
       display.innerHTML = ev.target.value;
     }else{
