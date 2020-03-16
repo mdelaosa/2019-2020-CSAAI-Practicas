@@ -13,11 +13,7 @@
  for (i=0; i<digit.length; i++) {
    console.log('hola');
     digit[i].onclick = (ev) => {
-      if (display.innerHTML == "0"){
-        display.innerHTML = ev.target.value;
-      }else{
-        display.innerHTML += ev.target.value;
-      }
+      display.innerHTML += ev.target.value;
  }
 
  // Operadores
