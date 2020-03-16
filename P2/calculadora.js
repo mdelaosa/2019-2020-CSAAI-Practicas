@@ -1,30 +1,51 @@
-console.log("Ejecutando JS...");
+ console.log("Initializing calculator");
 
-//-- Crear objeto gui, con los elementos de la interfaz gráfica
-//-- Al tenerlo agrupado podemos pasarlo como parámetro o asignárselo
-//-- a otro objeto
-const gui = {
-  display: document.getElementById("display"),
-  boton_inc: document.getElementById("boton_inc"),
-  boton_dec: document.getElementById("boton_dec")
-}
+ display = document.getElementById("display");
+ equal = document.getElementById("equal");
+ del = document.getElementById("del");
+ c = document.getElementById("c");
 
-//-- Objeto contador: Contiene el valor y el método para incrementarse
-const counter = {
-  valor: 0,
-  inc : function(value) {
-    this.valor += value;
-    gui.display.innerHTML = this.valor;
+ // Digitos y operadores
+ let digit = document.getElementsByClassName("digit");
+ let operator = document.getElementsByClassName("operator");
+
+ // Para meter mas de un digito
+ for (i=0; i<digit.length; i++) {
+    digit[i].onclick = (ev) => {
+      if (display.innerHTML == "0"){
+        display.innerHTML = ev.target.value;
+      }else{
+        display.innerHTML += ev.target.value;
+      }
+ }
+
+ // Operadores
+for (i=0; i<operator.length; i++){
+  operadores[i].onclick = (ev) =>{
+    if (display.innerHTML == "0"){
+      display.innerHTML = ev.target.value;
+    }else{
+      display.innerHTML += ev.target.value;
+    }
   }
 }
 
-//-------- Accciones:
-//-- Incrementar contador
-gui.boton_inc.onclick = () => {
-  counter.inc(1);
-}
 
-//-- Decrementar contador
-gui.boton_dec.onclick = () =>{
-  counter.inc(-1);
-}
+  // Igual
+  equal.onclick = () => {
+    display.innerHTML = eval(display.innerHTML);
+  }
+
+  // Borrar todo
+ c.onclick = () => {
+   display.innerHTML = "0";
+ }
+
+// Borrar lo ultimo añadido
+ del.onclick = () => {
+   if (display.innerHTML == ""){
+     display.innerHTML = "0";
+   }else{
+     display.innerHTML = display.innerHTML.slice(0,-1);
+   }
+ }
