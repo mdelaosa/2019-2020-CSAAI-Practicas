@@ -10,7 +10,7 @@
  let digit = document.getElementsByClassName("digit");
  let operator = document.getElementsByClassName("operator");
 
- // Para meter mas de un digito
+ // Digitos
  for (i=0; i<digit.length; i++) {
   digit[i].onclick = (ev) => {
     if (display.innerHTML == "0"){
