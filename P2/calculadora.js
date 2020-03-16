@@ -4,6 +4,7 @@
  equal = document.getElementById("equal");
  del = document.getElementById("del");
  c = document.getElementById("c");
+ sqrt = document.getElementById("sqrt");
 
  // Digitos y operadores
  let digit = document.getElementsByClassName("digit");
@@ -32,7 +33,6 @@ for (i=0; i<operator.length; i++){
   }
 }
 
-
   // Igual
   equal.onclick = () => {
     display.innerHTML = eval(display.innerHTML);
@@ -51,3 +51,8 @@ for (i=0; i<operator.length; i++){
      display.innerHTML = display.innerHTML.slice(0,-1);
    }
  }
+
+ // Raiz
+ sqrt.onclick = () => {
+  display.innerHTML = Math.sqrt(display.innerHTML);
+}
