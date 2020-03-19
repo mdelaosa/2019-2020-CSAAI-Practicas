@@ -10,6 +10,9 @@ console.log(`canvas: Anchura: ${canvas.width}, Altura: ${canvas.height}`);
 //-- Obtener el contexto para pintar en el canvas
 const ctx = canvas.getContext("2d");
 
+//-- Variables para la bola
+let bola_x = 50;
+
 //-- Pintar todos los objetos en el canvas
 function draw() {
   //----- Dibujar la Bola
@@ -17,7 +20,7 @@ function draw() {
   ctx.fillStyle='lightblue';
 
   //-- x,y, anchura, altura
-  ctx.rect(100, 200, 10, 10);
+  ctx.rect(bola_x, 200, 10, 10);
   ctx.fill();
 
   //------- Dibujar las raquetas
