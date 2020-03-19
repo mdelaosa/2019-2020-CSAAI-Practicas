@@ -73,7 +73,7 @@ function animacion()
   if (bola_x >= canvas.width) {
     //-- Hay colisión. Cambiar el signo de la bola
     bola_vx = bola_vx * -1;
-  }else if (bola_x >= 0) {
+  }else if (bola_x <= 0) {
     //-- Hay colisión. Cambiar el signo de la bola
     bola_vx = bola_vx * -1;
   }
