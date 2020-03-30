@@ -95,7 +95,7 @@ function animacion()
     sonido_rebote.currentTime = 0;
     sonido_rebote.play();
   }
-  if (bola.y >= canvas.height) {
+  if (bola.y >= canvas.height || bola.y <= 0) {
     //-- Hay colisión vertical. Cambiar el signo de la bola
     bola.vy = bola.vy * -1;
     //-- Reproducir sonido

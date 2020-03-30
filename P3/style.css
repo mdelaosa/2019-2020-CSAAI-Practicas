@@ -3,7 +3,7 @@ body {
     background-color: black;
 }
 #titulo{
-  justify-content:center
+  margin: auto;
 }
 
 /* Estilo para el canvas: Negro */
