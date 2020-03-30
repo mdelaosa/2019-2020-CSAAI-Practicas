@@ -1,13 +1,12 @@
 /* Fondo de la página */
 body {
-    background-color: white;
+    background-color: black;
 }
 #titulo{
-  margin-left: auto;
-  margin-right: auto;
+  justify-content:center
 }
 
 /* Estilo para el canvas: Negro */
 #canvas {
-  background-color: black;
+  background-color: grey;
 }
