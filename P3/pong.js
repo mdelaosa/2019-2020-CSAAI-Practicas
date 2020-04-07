@@ -98,7 +98,7 @@ function animacion()
   //-- pasamos al estado de SAQUE
   if (bola.x <= bola.size) {
     //-- Reproducir sonido
-    sonido_rebote.currentTime = 0.25;
+    sonido_rebote.currentTime = 0.35;
     sonido_rebote.play();
     estado = ESTADO.SAQUE;
     bola.init();
@@ -106,7 +106,7 @@ function animacion()
     return;
   }else if (bola.x >= canvas.width) {
     //-- Reproducir sonido
-    sonido_rebote.currentTime = 0.25;
+    sonido_rebote.currentTime = 0.35;
     sonido_rebote.play();
     estado = ESTADO.SAQUE;
     bola.init();
