@@ -11,7 +11,7 @@ console.log(`canvas: Anchura: ${canvas.width}, Altura: ${canvas.height}`);
 const ctx = canvas.getContext("2d");
 
 //-- Obtener Sonidos
-const sonido_raqueta = new Audio("pong-raqueta.mp3");
+const sonido_raqueta = new Audio("deslizar.mp3");
 const sonido_rebote = new Audio("audio.mp3");
 
 //-- Estados del juego
@@ -19,11 +19,16 @@ const ESTADO = {
   INIT: 0,
   SAQUE: 1,
   JUGANDO: 2,
+  GANAR: 3,
 }
 
 //-- Variable de estado
 //-- Arrancamos desde el estado inicial
 let estado = ESTADO.INIT;
+
+//-- Variables puntos
+var Point1 = 0;
+var Point2 = 0;
 
 //-- Pintar todos los objetos en el canvas
 function draw() {
@@ -54,10 +59,10 @@ function draw() {
   ctx.stroke();
 
   //------ Dibujar el tanteo
-  ctx.font = "100px Arial";
-  ctx.fillStyle = "white";
-  ctx.fillText("0", 200, 80);
-  ctx.fillText("1", 340, 80);
+  ctx.font = "50px Raleway";
+  ctx.fillStyle = "#ffdc43";
+  ctx.fillText(Point1, 255, 40);
+  ctx.fillText(Point2, 317, 40);
 
   //-- Dibujar el texto de sacar
   if (estado == ESTADO.SAQUE) {
@@ -102,7 +107,7 @@ function animacion()
     sonido_rebote.play();
     estado = ESTADO.SAQUE;
     bola.init();
-    console.log("Tanto!!!!");
+    console.log("ROSS: IT WAS A BREAK");
     return;
   }else if (bola.x >= canvas.width) {
     //-- Reproducir sonido
@@ -110,7 +115,7 @@ function animacion()
     sonido_rebote.play();
     estado = ESTADO.SAQUE;
     bola.init();
-    console.log("Tanto!!!!");
+    console.log("RACHEL: IT WASN'T A BREAK");
     return;
   }
 

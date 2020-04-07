@@ -42,7 +42,7 @@ class Raqueta
   {
     //------- Dibujar las raquetas
     this.ctx.beginPath();
-    this.ctx.fillStyle='pink';
+    this.ctx.fillStyle='#ffdc43';
 
     //-- Raqueta izquierda
     this.ctx.rect(this.x, this.y, this.width, this.height);
