@@ -61,15 +61,15 @@ function draw() {
 
   //-- Dibujar el texto de sacar
   if (estado == ESTADO.SAQUE) {
-    ctx.font = "40px Arial";
-    ctx.fillStyle = "yellow";
-    ctx.fillText("Saca!", 30, 350);
+    ctx.font = "25px Verdana";
+    ctx.fillStyle = "pink";
+    ctx.fillText("Pulsa s para sacar", 30, 350);
   }
 
   //-- Dibujar el texto de comenzar
   if (estado == ESTADO.INIT) {
-    ctx.font = "40px Arial";
-    ctx.fillStyle = "green";
+    ctx.font = "35px Arial";
+    ctx.fillStyle = "lightpink";
     ctx.fillText("Pulsa Start!", 30, 350);
   }
 }
