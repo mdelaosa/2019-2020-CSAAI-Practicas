@@ -12,7 +12,7 @@ const ctx = canvas.getContext("2d");
 
 //-- Obtener Sonidos
 const sonido_raqueta = new Audio("pong-raqueta.mp3");
-const sonido_rebote = new Audio("pong-rebote.mp3");
+const sonido_rebote = new Audio("audio.mp3");
 
 //-- Estados del juego
 const ESTADO = {
@@ -88,28 +88,30 @@ function animacion()
   //-- Comprobar si la bola ha alcanzado el límite derecho
   //-- Si es así, se cambia de signo la velocidad, para
   // que "rebote" y vaya en el sentido opuesto
-  if (bola.x >= canvas.width) {
-    //-- Hay colisión horizontals. Cambiar el signo de la bola
-    bola.vx = bola.vx * -1;
-    //-- Reproducir sonido
-    sonido_rebote.currentTime = 0;
-    sonido_rebote.play();
-  }
+
   if (bola.y >= canvas.height || bola.y <= 0) {
     //-- Hay colisión vertical. Cambiar el signo de la bola
     bola.vy = bola.vy * -1;
-    //-- Reproducir sonido
-    sonido_rebote.currentTime = 0;
-    sonido_rebote.play();
   }
 
   //-- Si llega al límite izquierdo, hemos perdido
   //-- pasamos al estado de SAQUE
   if (bola.x <= bola.size) {
-     estado = ESTADO.SAQUE;
-     bola.init();
-     console.log("Tanto!!!!");
-     return;
+    //-- Reproducir sonido
+    sonido_rebote.currentTime = 0.25;
+    sonido_rebote.play();
+    estado = ESTADO.SAQUE;
+    bola.init();
+    console.log("Tanto!!!!");
+    return;
+  }else if (bola.x >= canvas.width) {
+    //-- Reproducir sonido
+    sonido_rebote.currentTime = 0.25;
+    sonido_rebote.play();
+    estado = ESTADO.SAQUE;
+    bola.init();
+    console.log("Tanto!!!!");
+    return;
   }
 
   //-- Comprobar si hay colisión con la raqueta izquierda
