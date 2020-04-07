@@ -59,7 +59,7 @@ function draw() {
   ctx.stroke();
 
   //------ Dibujar el tanteo
-  ctx.font = "50px Raleway";
+  ctx.font = "50px Comic Neue";
   ctx.fillStyle = "#ffdc43";
   ctx.fillText(Point1, 255, 40);
   ctx.fillText(Point2, 317, 40);
