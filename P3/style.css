@@ -8,5 +8,5 @@ body {
 
 /* Estilo para el canvas: Negro */
 #canvas {
-  background-color: grey;
+  background-image: url(canvas.png);
 }

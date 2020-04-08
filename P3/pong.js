@@ -42,40 +42,27 @@ function draw() {
   raqI.draw();
   raqD.draw();
 
-  //--------- Dibujar la red
-  ctx.beginPath();
-
-  //-- Estilo de la linea: discontinua
-  //-- Trazos de 10 pixeles, y 10 de separacion
-  ctx.setLineDash([10, 10]);
-  ctx.strokeStyle = 'white';
-  ctx.lineWidth = 2;
-  //-- Punto superior de la linea. Su coordenada x está en la mitad
-  //-- del canvas
-  ctx.moveTo(canvas.width/2, 0);
-
-  //-- Dibujar hasta el punto inferior
-  ctx.lineTo(canvas.width/2, canvas.height);
-  ctx.stroke();
 
   //------ Dibujar el tanteo
-  ctx.font = "50px Comic Neue";
+  ctx.font = "50px 	Major Mono Display";
   ctx.fillStyle = "#ffdc43";
   ctx.fillText(Point1, 255, 40);
-  ctx.fillText(Point2, 317, 40);
+  ctx.fillText(Point2, 311, 40);
 
   //-- Dibujar el texto de sacar
   if (estado == ESTADO.SAQUE) {
-    ctx.font = "25px Verdana";
+    ctx.font = "20px 	Walter Turncoat";
     ctx.fillStyle = "pink";
-    ctx.fillText("Pulsa s para sacar", 30, 350);
+    ctx.fillText("Pulsa SPACE para sacar.", 30, 340);
+    ctx.fillText("Pulsa A-Q para Rachel.", 30, 360);
+    ctx.fillText("Pulsa P-L para Ross.", 30, 380);
   }
 
   //-- Dibujar el texto de comenzar
   if (estado == ESTADO.INIT) {
-    ctx.font = "35px Arial";
+    ctx.font = "35px  Walter Turncoat";
     ctx.fillStyle = "lightpink";
-    ctx.fillText("Pulsa Start!", 30, 350);
+    ctx.fillText("Pulsa Start", 30, 350);
   }
 }
 
@@ -103,7 +90,7 @@ function animacion()
   //-- pasamos al estado de SAQUE
   if (bola.x <= bola.size) {
     //-- Reproducir sonido
-    sonido_rebote.currentTime = 0.35;
+    sonido_rebote.currentTime = 0.45;
     sonido_rebote.play();
     estado = ESTADO.SAQUE;
     bola.init();
@@ -111,7 +98,7 @@ function animacion()
     return;
   }else if (bola.x >= canvas.width) {
     //-- Reproducir sonido
-    sonido_rebote.currentTime = 0.35;
+    sonido_rebote.currentTime = 0.45;
     sonido_rebote.play();
     estado = ESTADO.SAQUE;
     bola.init();
@@ -186,7 +173,7 @@ window.onkeydown = (e) => {
     case "l":
       raqD.v = raqD.v_ini;
       break;
-    case "s":
+    case " ":
 
       //-- El saque solo funciona en el estado de SAQUE
       if (estado == ESTADO.SAQUE) {
