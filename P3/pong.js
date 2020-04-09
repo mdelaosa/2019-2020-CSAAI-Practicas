@@ -64,6 +64,26 @@ function draw() {
     ctx.fillStyle = "lightpink";
     ctx.fillText("Pulsa Start", 30, 350);
   }
+
+  //-- Dibujar texto ganador
+  if (estado == ESTADO.GANAR){
+    if (Point1 > Point2 && Point1 == 3){
+      ctx.font = "35px  Walter Turncoat";
+      ctx.fillStyle = "lightpink";
+      ctx.fillText("It wasn't a break", 30, 350);
+      ctx.font = "15px  Walter Turncoat";
+      ctx.fillStyle = "lightpink";
+      ctx.fillText("Pulsa SPACE para reiniciar", 30, 370);
+    }else if (Point2 > Point1 && Point2 == 3){
+      ctx.font = "35px  Walter Turncoat";
+      ctx.fillStyle = "lightpink";
+      ctx.fillText("It was a break", 30, 350);
+      ctx.font = "15px  Walter Turncoat";
+      ctx.fillStyle = "lightpink";
+      ctx.fillText("Pulsa SPACE para reiniciar", 30, 370);
+    }
+
+  }
 }
 
 //---- Bucle principal de la animación
@@ -75,7 +95,6 @@ function animacion()
   //-- Actualizar la raqueta con la velocidad actual
   raqI.update();
   raqD.update();
-
 
   //-- Comprobar si la bola ha alcanzado el límite derecho
   //-- Si es así, se cambia de signo la velocidad, para
@@ -92,17 +111,25 @@ function animacion()
     //-- Reproducir sonido
     sonido_rebote.currentTime = 0.45;
     sonido_rebote.play();
+    Point2++;
     estado = ESTADO.SAQUE;
     bola.init();
     console.log("ROSS: IT WAS A BREAK");
+    if (Point2 > Point1 && Point2 == 3){
+      estado = ESTADO.GANAR;
+    }
     return;
   }else if (bola.x >= canvas.width) {
     //-- Reproducir sonido
     sonido_rebote.currentTime = 0.45;
     sonido_rebote.play();
+    Point1++;
     estado = ESTADO.SAQUE;
     bola.init();
     console.log("RACHEL: IT WASN'T A BREAK");
+    if (Point1 > Point2 && Point1 == 3){
+      estado = ESTADO.GANAR;
+    }
     return;
   }
 
@@ -192,6 +219,10 @@ window.onkeydown = (e) => {
         estado = ESTADO.JUGANDO;
 
         return false;
+      }
+      if (estado == ESTADO.GANAR) {
+        Point1 = 0;
+        Point2 = 0;
       }
     default:
   }
