@@ -33,15 +33,15 @@ function filtrogris(){
 
   //-- Filtrar la imagen según el nuevo umbral
   for (let i = 0; i < data.length; i+=4) {
-      brillo = (3 * r + 4 * g + b)/8;
-      data[i] = umbral;
+      brillo = (3 * data[i] + 4 * data[i+1] + data[i+3])/8
+      data[i] = brillo;
       data[i+1] = brillo;
       data[i+2] = brillo;
     }
 
   //-- Poner la imagen modificada en el canvas
   ctx.putImageData(imgData, 0, 0);
-  }
+
 }
 
 console.log("Fin...");
