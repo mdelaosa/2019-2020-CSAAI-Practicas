@@ -2,25 +2,24 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Filtro 5</title>
+    <title>Filtros</title>
     <link rel="stylesheet" href="style.css">
     <script src="filtros.js" defer></script>
   </head>
   <body>
-    <canvas id="canvas"></canvas>
     <span>
       <img src="foto.png" id="imagenbase">
       <img src="foto.png" id="imagesrc">
     </span>
     <br>
-    <p>Establece el umbral de rojo:</p>
-    <input type="range" id="deslizador_r" min="0" max="255" value="255"/>
-    <p id="red_value">00</p>
-    <p>Establece el umbral de verde:</p>
-    <input type="range" id="deslizador_v" min="0" max="255" value="255"/>
-    <p id="green_value">00</p>
-    <p>Establece el umbral de azul:</p>
-    <input type="range" id="deslizador_a" min="0" max="255" value="255"/>
-    <p id="blue_value">00</p>
+    <p>Rojo:</p>
+    <input type="range" id="deslizadorR" min="0" max="255" value="255"/>
+    <p id="valueR">00</p>
+    <p>Verde:</p>
+    <input type="range" id="deslizadorV" min="0" max="255" value="255"/>
+    <p id="valueV">00</p>
+    <p>Azul:</p>
+    <input type="range" id="deslizadorA" min="0" max="255" value="255"/>
+    <p id="valueA">00</p>
   </body>
 </html>
