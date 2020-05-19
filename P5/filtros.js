@@ -11,8 +11,8 @@ var seleccion = new Image(400,434);
 seleccion.src = 'referencia.png';
 const boton1 = document.getElementById('img1');
 const boton2 = document.getElementById('img2');
-canvas.width = 400;
-canvas.height = 434;
+canvas.width = 450;
+canvas.height = 488;
 
 //-- Acceso al filtros
 const rgb = document.getElementById('rgb');
