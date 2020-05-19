@@ -5,11 +5,18 @@ const canvas = document.getElementById('canvas');
 const img = document.getElementById('imagesrc');
 const ctx = canvas.getContext('2d');
 
+//-- Acceso al filtros
+const rgb = document.getElementById('RGB');
+
 //-- Acceso al deslizador
 const deslizadorR = document.getElementById('deslizadorR');
+const deslizadorV = document.getElementById('deslizadorV');
+const deslizadorA = document.getElementById('deslizadorA');
 
 //-- Valor del deslizador
 const valueR = document.getElementById('valueR');
+const valueV = document.getElementById('valueV');
+const valueA = document.getElementById('valueA');
 
 //-- Función de retrollamada de imagen cargada
 //-- La imagen no se carga instantaneamente, sino que
@@ -29,33 +36,44 @@ img.onload = function () {
   console.log("Imagen lista...");
 };
 
-
-//-- Funcion de retrollamada del deslizador
-deslizadorR.oninput = () => {
-  //-- Mostrar el nuevo valor del deslizador
+function Valores_RGB(){
   valueR.innerHTML = deslizadorR.value;
-
-  //-- Situar la imagen original en el canvas
-  //-- No se han hecho manipulaciones todavia
+  valueV.innerHTML = deslizadorV.value;
+  valueA.innerHTML = deslizadorA.value;
   ctx.drawImage(img, 0,0);
-
-  //-- Obtener la imagen del canvas en pixeles
   let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-
-  //-- Obtener el array con todos los píxeles
   let data = imgData.data
 
-  //-- Obtener el umbral de rojo del desliador
-  umbralR = deslizadorR.value
+  let umbralR = deslizadorR.value;
+  let umbralV = deslizadorV.value;
+  let umbralA = deslizadorA.value;
 
-  //-- Filtrar la imagen según el nuevo umbral
   for (let i = 0; i < data.length; i+=4) {
     if (data[i] > umbralR)
       data[i] = umbralR;
-  }
+    }
+    if (data[i+1] > umbralV){
+      data[i+1] = umbralV;
+    }
+    if (data[i+2] > umbralA){
+      data[i+2] = umbralA;
+    }
 
-  //-- Poner la imagen modificada en el canvas
   ctx.putImageData(imgData, 0, 0);
+}
+
+rgb.onclick = () => {
+  console.log("Umbrales de color");
+   ctx.drawImage(img, 0,0);
+     deslizadorR.oninput = () => {
+       Valores_RGB();
+     }
+     deslizadorG.oninput = () => {
+       Valores_RGB();
+     }
+     deslizadorB.oninput = () => {
+       Valores_RGB();
+     }
 }
 
 console.log("Fin...");
