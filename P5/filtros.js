@@ -51,7 +51,7 @@ function Valores_RGB(){
   let umbralA = deslizadorA.value;
 
   for (var i = 0; i < data.length; i+=4) {
-    if (data[i] > umbralR)
+    if (data[i] > umbralR){
       data[i] = umbralR;
     }
     if (data[i+1] > umbralV){
@@ -60,7 +60,7 @@ function Valores_RGB(){
     if (data[i+2] > umbralA){
       data[i+2] = umbralA;
     }
-
+  }
   ctx.putImageData(imgData, 0, 0);
 }
 
@@ -73,7 +73,7 @@ rgb.onclick = () => {
      }
      deslizadorV.oninput = () => {
        Valores_RGB();
-       console.log("Cambio azul");
+       console.log("Cambio verde");
      }
      deslizadorA.oninput = () => {
        Valores_RGB();
