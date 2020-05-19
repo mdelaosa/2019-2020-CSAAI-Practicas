@@ -7,12 +7,12 @@ const imagen2 = document.getElementById('imagesrc2');
 const ctx = canvas.getContext('2d');
 
 //-- Imágenes
-var seleccion = new Image(300,340);
+var seleccion = new Image(300,326);
 seleccion.src = 'referencia.png';
 const boton1 = document.getElementById('img1');
 const boton2 = document.getElementById('img2');
-canvas.width = 300;
-canvas.height = 340;
+canvas.width = seleccion.width;
+canvas.height = seleccion.height;
 
 //-- Acceso al filtros
 const rgb = document.getElementById('rgb');
