@@ -6,7 +6,7 @@ const img = document.getElementById('imagesrc');
 const ctx = canvas.getContext('2d');
 
 //-- Acceso al filtros
-const rgb = document.getElementById('RGB');
+const rgb = document.getElementById('rgb');
 
 //-- Acceso al deslizador
 const deslizadorR = document.getElementById('deslizadorR');
