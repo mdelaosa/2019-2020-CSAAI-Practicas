@@ -37,12 +37,14 @@ img.onload = function () {
 };
 
 function Valores_RGB(){
+
+  ctx.drawImage(img, 0,0);
+  let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  let data = imgData.data;
+
   valueR.innerHTML = deslizadorR.value;
   valueV.innerHTML = deslizadorV.value;
   valueA.innerHTML = deslizadorA.value;
-  ctx.drawImage(img, 0,0);
-  let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  let data = imgData.data
 
   let umbralR = deslizadorR.value;
   let umbralV = deslizadorV.value;
