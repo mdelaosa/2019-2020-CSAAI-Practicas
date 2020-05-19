@@ -11,6 +11,11 @@ div{
 }
 #imagesrc{
   width: 400px;
+  height: 434px;
+}
+#imagesrc2{
+  width: 400px;
+  height: 434px;
 }
 canvas {
   padding-left: 0;
