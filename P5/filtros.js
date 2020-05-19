@@ -2,8 +2,14 @@ console.log("Ejecutando JS....")
 
 //-- Obtener elementos del DOM
 const canvas = document.getElementById('canvas');
-const img = document.getElementById('imagesrc');
+const imagen = document.getElementById('imagesrc');
+const imagen2 = document.getElementById('imagesrc2');
 const ctx = canvas.getContext('2d');
+
+//-- Imágenes
+var seleccion = new Image(400,438);
+const boton1 = document.getElementById('img1');
+const boton2 = document.getElementById('img2');
 
 //-- Acceso al filtros
 const rgb = document.getElementById('rgb');
@@ -22,19 +28,35 @@ const valueA = document.getElementById('valueA');
 //-- La imagen no se carga instantaneamente, sino que
 //-- lleva un tiempo. Sólo podemos acceder a ella una vez
 //-- que esté totalmente cargada
-img.onload = function () {
-
+seleccion = 'referencia.png';
+seleccion.onload = function () {
   //-- Se establece como tamaño del canvas el mismo
   //-- que el de la imagen original
-  canvas.width = img.width;
-  canvas.height = img.height;
-
+  canvas.width = seleccion.width;
+  canvas.height = seleccion.height;
   //-- Situar la imagen original en el canvas
   //-- No se han hecho manipulaciones todavia
   ctx.drawImage(img, 0,0);
-
-  console.log("Imagen lista...");
+  console.log("Seleccione imagen...");
 };
+
+boton1.onclick = () => {
+  imagen.onload = function(){
+    console.log("Cargamos imagen 1");
+    canvas.width = imagen.width;
+    canvas.height = imagen.height;
+    console.log("Imagen 1");
+  };
+}
+
+boton2.onclick = () => {
+  imagen.onload = function(){
+    console.log("Cargamos imagen 2");
+    canvas.width = imagen2.width;
+    canvas.height = imagen2.height;
+    console.log("Imagen 2");
+  };
+}
 
 function Valores_RGB(){
 
