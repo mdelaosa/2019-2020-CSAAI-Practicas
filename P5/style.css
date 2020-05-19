@@ -1,3 +1,20 @@
-img{
-  width:200px;
+body {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  position: absolute;
+}
+span{
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
