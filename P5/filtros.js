@@ -67,12 +67,15 @@ rgb.onclick = () => {
    ctx.drawImage(img, 0,0);
      deslizadorR.oninput = () => {
        Valores_RGB();
+       console.log("Cambio rojo");
      }
-     deslizadorG.oninput = () => {
+     deslizadorV.oninput = () => {
        Valores_RGB();
+       console.log("Cambio azul");
      }
-     deslizadorB.oninput = () => {
+     deslizadorA.oninput = () => {
        Valores_RGB();
+       console.log("Cambio azul");
      }
 }
 
