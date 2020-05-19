@@ -48,7 +48,7 @@ function Valores_RGB(){
   let umbralV = deslizadorV.value;
   let umbralA = deslizadorA.value;
 
-  for (let i = 0; i < data.length; i+=4) {
+  for (var i = 0; i < data.length; i+=4) {
     if (data[i] > umbralR)
       data[i] = umbralR;
     }
