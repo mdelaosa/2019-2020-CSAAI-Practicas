@@ -3,11 +3,10 @@ body {
   margin: 10px;
   border: none;
 }
-div{
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content:center;
+
+#deslizadores{
+ display:flex;
+ text-indent: 5em;
 }
 
 canvas {
