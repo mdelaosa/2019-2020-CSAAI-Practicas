@@ -16,6 +16,7 @@ canvas.height = seleccion.height;
 
 //-- Acceso al filtros
 const rgb = document.getElementById('rgb');
+const grises = document.getElementById('grises');
 
 //-- Acceso al deslizador
 const deslizadorR = document.getElementById('deslizadorR');
@@ -59,7 +60,6 @@ boton2.onclick = () => {
 }
 
 function Valores_RGB(){
-
   ctx.drawImage(img, 0,0);
   let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   let data = imgData.data;
@@ -101,6 +101,19 @@ rgb.onclick = () => {
        Valores_RGB();
        console.log("Cambio azul");
      }
+}
+
+grises.onclick = () => {
+  console.log("Umbrales de gris");
+  ctx.drawImage(img, 0,0);
+  let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  let data = imgData.data;
+  for (let i = 0; i < data.length; i+=4) {
+    brillo = (3*data[i] + 4*data[i+1]+ data[i+2])/8
+    data[i] = data[i+1] = data[i+2] = brillo;
+  }
+ctx.putImageData(imgData, 0,0);
+
 }
 
 console.log("Fin...");
