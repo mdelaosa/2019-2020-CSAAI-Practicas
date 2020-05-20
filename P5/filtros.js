@@ -7,7 +7,7 @@ const imagen2 = document.getElementById('imagesrc2');
 const ctx = canvas.getContext('2d');
 
 //-- Imágenes
-var seleccion = new Image(300,276);
+var seleccion = new Image(300,326);
 seleccion.src = 'referencia.png';
 const boton1 = document.getElementById('img1');
 const boton2 = document.getElementById('img2');
@@ -19,6 +19,7 @@ var reflejo = false;
 const rgb = document.getElementById('rgb');
 const grises = document.getElementById('grises');
 const espejo = document.getElementById('espejo');
+const abajo = document.getElementById('abajo');
 
 //-- Acceso al deslizador
 const deslizadorR = document.getElementById('deslizadorR');
@@ -91,7 +92,6 @@ function Valores_RGB(){
 
 rgb.onclick = () => {
   console.log("Umbrales de color");
-  reflejo = false;
   ctx.drawImage(img, 0,0);
     deslizadorR.oninput = () => {
        Valores_RGB();
@@ -109,7 +109,6 @@ rgb.onclick = () => {
 
 grises.onclick = () => {
   console.log("Umbrales de gris");
-  reflejo = false;
   ctx.drawImage(img, 0,0);
   let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   let data = imgData.data;
@@ -122,19 +121,24 @@ grises.onclick = () => {
 }
 
 espejo.onclick = () => {
-  console.log("Modo espejo");
+  console.log("Modo espejo horizontal");
   reflejo = true;
-  if (reflejo == true) {
-    ctx.drawImage(img, 0,0);
-    let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    let data = imgData.data;
-    ctx.translate(2*img.width, 0);
-    ctx.scale(-1, 1);
-    ctx.drawImage(img, 0, 0);
-  }
-
-  ctx.putImageData(imgData, 0,0);
+  ctx.drawImage(img, 0,0);
+  ctx.translate(canvas.width, 0);
+  ctx.scale(-1, 1);
+  ctx.drawImage(img, 0, 0);
   reflejo = false;
 }
+
+abajo.onclick = () => {
+  console.log("Modo espejo horizontal");
+  vertical = true;
+  ctx.drawImage(img, 0,0);
+  ctx.translate(0, canvas.height);
+  ctx.scale(1, -1);
+  ctx.drawImage(img, 0, 0);
+  vertical = false;
+}
+
 
 console.log("Fin...");
