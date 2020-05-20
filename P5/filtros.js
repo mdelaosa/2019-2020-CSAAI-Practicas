@@ -13,6 +13,7 @@ const boton1 = document.getElementById('img1');
 const boton2 = document.getElementById('img2');
 canvas.width = seleccion.width;
 canvas.height = seleccion.height;
+var reflejo = false;
 
 //-- Acceso al filtros
 const rgb = document.getElementById('rgb');
@@ -102,6 +103,7 @@ rgb.onclick = () => {
        Valores_RGB();
        console.log("Cambio azul");
      }
+    reflejo = false;
 }
 
 grises.onclick = () => {
@@ -114,17 +116,21 @@ grises.onclick = () => {
     realce = (3*data[i] + 4*data[i+1]+ data[i+2])/8
     data[i] = data[i+1] = data[i+2] = realce;
   }
+  reflejo = false;
   ctx.putImageData(imgData, 0,0);
 
 }
 
 espejo.onclick = () => {
   console.log("Modo espejo");
+  reflejo = true;
   ctx.drawImage(img, 0,0);
   let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   let data = imgData.data;
   ctx.translate(img.width, 0);
+  ctx.scale(-1, 1);
   ctx.drawImage(img, 0, 0, img.width, img.height);
+
 
   ctx.putImageData(imgData, 0,0);
 }
