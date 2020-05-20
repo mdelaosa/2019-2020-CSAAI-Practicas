@@ -7,7 +7,7 @@ const imagen2 = document.getElementById('imagesrc2');
 const ctx = canvas.getContext('2d');
 
 //-- Imágenes
-var seleccion = new Image(250,226);
+var seleccion = new Image(300,276);
 seleccion.src = 'referencia.png';
 const boton1 = document.getElementById('img1');
 const boton2 = document.getElementById('img2');
@@ -128,7 +128,7 @@ espejo.onclick = () => {
     ctx.drawImage(img, 0,0);
     let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     let data = imgData.data;
-    ctx.translate(img.width, 0);
+    ctx.translate(2*img.width, 0);
     ctx.scale(-1, 1);
     ctx.drawImage(img, 0, 0);
   }
