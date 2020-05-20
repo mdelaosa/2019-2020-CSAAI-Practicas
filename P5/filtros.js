@@ -124,9 +124,9 @@ grises.onclick = () => {
 espejo.onclick = () => {
   console.log("Modo espejo");
   reflejo = true;
-  ctx.drawImage(img, 0,0);
   let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   let data = imgData.data;
+  ctx.drawImage(img, 0,0);
   ctx.translate(img.width, 0);
   ctx.scale(-1, 1);
   ctx.drawImage(img, 0, 0, img.width, img.height);
