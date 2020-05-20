@@ -130,7 +130,7 @@ espejo.onclick = () => {
     let data = imgData.data;
     ctx.translate(img.width, 0);
     ctx.scale(-1, 1);
-    ctx.drawImage(img, 0, 0, img.width, img.height);
+    ctx.drawImage(img, 0, 0);
   }
 
   ctx.putImageData(imgData, 0,0);
