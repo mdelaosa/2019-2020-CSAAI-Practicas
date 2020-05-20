@@ -63,6 +63,7 @@ boton2.onclick = () => {
 
 function Valores_RGB(){
   ctx.drawImage(img, 0,0);
+  reflejo = false;
   let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   let data = imgData.data;
 
@@ -90,24 +91,25 @@ function Valores_RGB(){
 
 rgb.onclick = () => {
   console.log("Umbrales de color");
-   ctx.drawImage(img, 0,0);
-     deslizadorR.oninput = () => {
+  reflejo = false;
+  ctx.drawImage(img, 0,0);
+    deslizadorR.oninput = () => {
        Valores_RGB();
        console.log("Cambio rojo");
-     }
-     deslizadorV.oninput = () => {
+    }
+    deslizadorV.oninput = () => {
        Valores_RGB();
        console.log("Cambio verde");
-     }
-     deslizadorA.oninput = () => {
+    }
+    deslizadorA.oninput = () => {
        Valores_RGB();
        console.log("Cambio azul");
-     }
-    reflejo = false;
+    }
 }
 
 grises.onclick = () => {
   console.log("Umbrales de gris");
+  reflejo = false;
   ctx.drawImage(img, 0,0);
   let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   let data = imgData.data;
@@ -116,9 +118,7 @@ grises.onclick = () => {
     realce = (3*data[i] + 4*data[i+1]+ data[i+2])/8
     data[i] = data[i+1] = data[i+2] = realce;
   }
-  reflejo = false;
   ctx.putImageData(imgData, 0,0);
-
 }
 
 espejo.onclick = () => {
