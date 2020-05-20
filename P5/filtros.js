@@ -17,6 +17,7 @@ canvas.height = seleccion.height;
 //-- Acceso al filtros
 const rgb = document.getElementById('rgb');
 const grises = document.getElementById('grises');
+const espejo = document.getElementById('espejo');
 
 //-- Acceso al deslizador
 const deslizadorR = document.getElementById('deslizadorR');
@@ -113,8 +114,18 @@ grises.onclick = () => {
     realce = (3*data[i] + 4*data[i+1]+ data[i+2])/8
     data[i] = data[i+1] = data[i+2] = realce;
   }
-ctx.putImageData(imgData, 0,0);
+  ctx.putImageData(imgData, 0,0);
 
+}
+
+espejo.onclick = () => {
+  let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  let data = imgData.data;
+  ctx.translate(img.width, 0);
+  ctx.scale(-1, 1);
+  ctx.drawImage(img, 0, 0, img.width, img.height);
+
+  ctx.putImageData(imgData, 0,0);
 }
 
 console.log("Fin...");
