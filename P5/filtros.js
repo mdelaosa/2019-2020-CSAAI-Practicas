@@ -7,7 +7,7 @@ const imagen2 = document.getElementById('imagesrc2');
 const ctx = canvas.getContext('2d');
 
 //-- Imágenes
-var seleccion = new Image(350,326);
+var seleccion = new Image(250,226);
 seleccion.src = 'referencia.png';
 const boton1 = document.getElementById('img1');
 const boton2 = document.getElementById('img2');
