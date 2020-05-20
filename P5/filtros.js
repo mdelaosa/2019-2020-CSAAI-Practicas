@@ -140,5 +140,4 @@ abajo.onclick = () => {
   vertical = false;
 }
 
-
 console.log("Fin...");
