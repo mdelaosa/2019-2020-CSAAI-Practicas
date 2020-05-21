@@ -17,3 +17,6 @@ Tiene las siguientes mejoras:
 - Concatenación de filtros: En las opciones de espejo, se puede poner en grises,
                             cambiar los valores RGB o "añadir" el otro tipo de
                             espejo.
+
+Nota: Si se prueba desde el móvil, existe una diferencia de color de fondo, pero
+      la práctica funciona sin problema.
