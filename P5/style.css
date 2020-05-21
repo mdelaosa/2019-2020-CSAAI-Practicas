@@ -13,11 +13,11 @@ canvas {
 }
 
 button{
-  width: 90px;
+  width: 95px;
   height: 45px;
   background-color: rgba(10, 10, 10, 0.9);
   color: #E0FFFF;
-  font-family: "Quicksand";
+  font-family: "Abril Fatface";
   border-radius: 15px 5px 15px 5px;
   opacity: 0.7;
 }
