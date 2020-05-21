@@ -13,7 +13,6 @@ const boton1 = document.getElementById('img1');
 const boton2 = document.getElementById('img2');
 canvas.width = seleccion.width;
 canvas.height = seleccion.height;
-var reflejo = false;
 
 //-- Acceso al filtros
 const rgb = document.getElementById('rgb');
@@ -31,15 +30,7 @@ const valueR = document.getElementById('valueR');
 const valueV = document.getElementById('valueV');
 const valueA = document.getElementById('valueA');
 
-//-- Función de retrollamada de imagen cargada
-//-- La imagen no se carga instantaneamente, sino que
-//-- lleva un tiempo. Sólo podemos acceder a ella una vez
-//-- que esté totalmente cargada
 seleccion.onload = function () {
-  //-- Se establece como tamaño del canvas el mismo
-  //-- que el de la imagen original
-  //-- Situar la imagen original en el canvas
-  //-- No se han hecho manipulaciones todavia
   ctx.drawImage(seleccion, 0,0);
   console.log("Seleccione imagen...");
 };
@@ -54,7 +45,7 @@ boton1.onclick = () => {
 }
 
 boton2.onclick = () => {
-  imagen.onload = function(){
+  imagen2.onload = function(){
     console.log("Cargamos imagen 2");
     console.log("Imagen 2");
   };
@@ -64,7 +55,6 @@ boton2.onclick = () => {
 
 function Valores_RGB(){
   ctx.drawImage(img, 0,0);
-  reflejo = false;
   let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   let data = imgData.data;
 
@@ -122,22 +112,18 @@ grises.onclick = () => {
 
 espejo.onclick = () => {
   console.log("Modo espejo horizontal");
-  reflejo = true;
   ctx.drawImage(img, 0,0);
   ctx.translate(canvas.width, 0);
   ctx.scale(-1, 1);
   ctx.drawImage(img, 0, 0);
-  reflejo = false;
 }
 
 abajo.onclick = () => {
   console.log("Modo espejo horizontal");
-  vertical = true;
   ctx.drawImage(img, 0,0);
   ctx.translate(0, canvas.height);
   ctx.scale(1, -1);
   ctx.drawImage(img, 0, 0);
-  vertical = false;
 }
 
 console.log("Fin...");
