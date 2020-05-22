@@ -11,3 +11,17 @@ button:hover {
    background-color: #C98BC8;
    color: black;
 }
+
+#directo{
+
+}
+
+#izquierda{
+  margin-left: 50px;
+  float:left;
+}
+
+#derecha{
+  margin-right: 50px;
+  float: right;
+}
