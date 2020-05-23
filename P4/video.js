@@ -30,7 +30,7 @@ console.log("Ejecutando JS...");
     video.poster = false;
     video.src = video1.src;
     video.muted = false;
-    video1.style.border = "doted solid white";
+    video1.style.border = "dotted #0a0a0a 5px";
     video2.style.border = "none";
     video3.style.border = "none";
     imgprueba.style.border = "none";
@@ -43,7 +43,7 @@ console.log("Ejecutando JS...");
     video.src = video2.src;
     video.muted = false;
     video1.style.border = "none";
-    video2.style.border = "doted";
+    video2.style.border = "dotted #0a0a0a 5px";
     video3.style.border = "none";
     imgprueba.style.border = "none";
 
@@ -56,7 +56,7 @@ console.log("Ejecutando JS...");
     video.muted = false;
     video1.style.border = "none";
     video2.style.border = "none";
-    video3.style.border = "doted";
+    video3.style.border = "dotted #0a0a0a 5px";
     imgprueba.style.border = "none";
 
   };
@@ -68,6 +68,6 @@ console.log("Ejecutando JS...");
     video1.style.border = "none";
     video2.style.border = "none";
     video3.style.border = "none";
-    imgprueba.style.border = "doted";
+    imgprueba.style.border = "dotted #0a0a0a 5px";
 
   };
