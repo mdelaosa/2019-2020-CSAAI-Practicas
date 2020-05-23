@@ -17,6 +17,19 @@ body {
   margin: 10px;
 }
 
+input{
+  width: 105px;
+  height: 45px;
+  background-color: rgba(10, 10, 10, 0.9);
+  color: #2EBDB1;
+  font: bold 100% monospace;
+  border-radius: 15px 5px 15px 5px;
+}
+input:hover {
+   background-color: #2EBDB1;
+   color: black;
+}
+
 #bloques{
   float: right;
   width: 70%;

@@ -8,7 +8,3 @@ algunas de sus frases célebres.
 El botón "Best Moments" tiene un hipervículo que te lleva a un vídeo de
 Youtube con algunos de sus mejores momentos, el enlace se abre en la misma
 pestaña en la que se esté visualizando el CV.
-
-La imagen de fondo ha sido sacada de una página sin Copyright, y tanto el gif
-como la imagen que sale en su defecto, han sido sacados de Tumblr. La imagen
-del nombre ha sido realizada por mi.
