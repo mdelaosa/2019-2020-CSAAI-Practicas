@@ -77,8 +77,7 @@ console.log("Ejecutando JS...");
 
   prueba.onclick = () => {
     console.log("Video 1");
-    video.poster = false;
-    video.src = imgprueba.src;
+    video.poster = imgprueba.src;
     video.muted = false;
     video1.style.border = "none";
     video2.style.border = "none";
