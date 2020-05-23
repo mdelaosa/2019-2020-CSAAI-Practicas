@@ -22,7 +22,7 @@ console.log("Ejecutando JS...");
   imagen.width=300;
 
   var loop = document.getElementById("loop");
-  const init = 10;
+  const init = 8;
   const finish = init + 2;
   loop.onclick = () => {
     video4.loop=true;
