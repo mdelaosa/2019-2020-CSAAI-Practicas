@@ -26,7 +26,7 @@ console.log("Ejecutando JS...");
   const prueba = document.getElementById('prueba'); //-- Botón para seleccionar
 
   const loop = document.getElementById("loop");
-  const init = 8;
+  const init = 2;
   const finish = init + 2;
   loop.onclick = () => {
     video.loop=true;
@@ -78,7 +78,6 @@ console.log("Ejecutando JS...");
   prueba.onclick = () => {
     console.log("Video 1");
     video.poster = imgprueba.src;
-    video.muted = false;
     video1.style.border = "none";
     video2.style.border = "none";
     video3.style.border = "none";
