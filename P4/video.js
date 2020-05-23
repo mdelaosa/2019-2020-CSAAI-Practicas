@@ -22,11 +22,13 @@ console.log("Ejecutando JS...");
   imagen.width=300;
 
   var loop = document.getElementById("loop");
+  const init = 10;
+  const finish = init + 2;
   loop.onclick = () => {
     video4.loop=true;
     console.log("loop");
   };
-  
+
   var auto = document.getElementById("auto");
   noloop.onclick = () => {
     video.muted=false;
