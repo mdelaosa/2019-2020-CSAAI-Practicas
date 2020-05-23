@@ -62,31 +62,6 @@ const ESTADO = {
   }
 }
 
-
-
- /*// Digitos
- for (i=0; i<digit.length; i++) {
-  digit[i].onclick = (ev) => {
-    if (display.innerHTML == "0"){
-      display.innerHTML = ev.target.value;
-    }else{
-      display.innerHTML += ev.target.value;
-    }
-  }
-}
-
- // Operadores
-for (i=0; i<operator.length; i++){
-  console.log('operador')
-  operator[i].onclick = (ev) =>{
-    if (display.innerHTML == "0"){
-      display.innerHTML = ev.target.value;
-    }else{
-      display.innerHTML += ev.target.value;
-    }
-  }
-}*/
-
   // Igual
   equal.onclick = () => {
     display.innerHTML = eval(display.innerHTML);
