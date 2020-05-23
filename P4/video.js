@@ -2,8 +2,8 @@ console.log("Ejecutando JS...");
 
 //----- Obtener elemento de video y configurarlo
   const video = document.getElementById("video");
-  video.width = 840;  //-- Tamaño de la pantalla de video
-  video.height = 480;
+  video.poster = "https://raw.githubusercontent.com/mdelaosa/videosP4CSAAI/master/intro.gif";
+  video.width = 720;  //-- Tamaño de la pantalla de video
 
   const video1 = document.getElementById("video1")
   video1.src = "https://github.com/mdelaosa/videosP4CSAAI/raw/master/present.mp4"
@@ -29,8 +29,8 @@ console.log("Ejecutando JS...");
     console.log("loop");
   };
 
-  var auto = document.getElementById("auto");
-  noloop.onclick = () => {
+  var manual = document.getElementById("manual");
+  manual.onclick = () => {
     video.muted=false;
-    console.log("Auto");
+    console.log("manual");
   };
