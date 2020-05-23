@@ -8,10 +8,12 @@ console.log("Ejecutando JS...");
   const video1 = document.getElementById("video1")
   video1.src = "https://github.com/mdelaosa/videosP4CSAAI/raw/master/present.mp4"
   video1.width = 300;  //-- Tamaño de la pantalla de video
+  const vid1 = document.getElementById('vid1'); //-- Botón para seleccionar
 
   const video2 = document.getElementById("video2")
   video2.src = "https://github.com/mdelaosa/videosP4CSAAI/raw/master/Beyonce.mp4"
   video2.width = 300;  //-- Tamaño de la pantalla de video
+  const vid2 = document.getElementById('vid2'); //-- Botón para seleccionar
 
   const video3 = document.getElementById("video3")
   video3.src = "https://github.com/mdelaosa/videosP4CSAAI/raw/master/million%20dollars.mp4"
@@ -35,7 +37,7 @@ console.log("Ejecutando JS...");
     console.log("manual");
   };
 
-  video1.onclick = () => {
+  vid1.onclick = () => {
   console.log("Video 1");
     video.poster = false;
     video.src = video1.src;
@@ -46,3 +48,15 @@ console.log("Ejecutando JS...");
     imgprueba.style.border = "none";
 
 };
+
+  video2.onclick = () => {
+    console.log("Video 1");
+    video.poster = false;
+    video.src = video2.src;
+    video.muted = false;
+    video1.style.border = "none";
+    video2.style.border = "doted";
+    video3.style.border = "none";
+    imgprueba.style.border = "none";
+
+  };
