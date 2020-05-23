@@ -23,11 +23,11 @@ console.log("Ejecutando JS...");
   imgprueba.src = "https://raw.githubusercontent.com/mdelaosa/videosP4CSAAI/master/prueba.jpeg";
   imgprueba.width=300;
 
-  var loop = document.getElementById("loop");
+  const loop = document.getElementById("loop");
   const init = 8;
   const finish = init + 2;
   loop.onclick = () => {
-    video4.loop=true;
+    video.loop=true;
     console.log("loop");
   };
 
