@@ -20,3 +20,15 @@ console.log("Ejecutando JS...");
   const imgprueba = document.getElementById("imgprueba");
   imgprueba.src = "https://raw.githubusercontent.com/mdelaosa/videosP4CSAAI/master/prueba.jpeg";
   imagen.width=300;
+
+  var loop = document.getElementById("loop");
+  loop.onclick = () => {
+    video4.loop=true;
+    console.log("loop");
+  };
+  
+  var auto = document.getElementById("auto");
+  noloop.onclick = () => {
+    video.muted=false;
+    console.log("Auto");
+  };
