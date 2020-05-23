@@ -17,11 +17,15 @@ button:hover {
 }
 
 #izquierda{
-  margin-left: 50px;
+  margin-left: 100px;
   float:left;
 }
 
 #derecha{
-  margin-right: 50px;
+  margin-right: 100px;
   float: right;
+}
+
+#imgprueba{
+  width: 300px;
 }
