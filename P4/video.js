@@ -19,7 +19,7 @@ console.log("Ejecutando JS...");
 
   const imgprueba = document.getElementById("imgprueba");
   imgprueba.src = "https://raw.githubusercontent.com/mdelaosa/videosP4CSAAI/master/prueba.jpeg";
-  imagen.width=300;
+  imgprueba.width=300;
 
   var loop = document.getElementById("loop");
   const init = 8;
@@ -34,3 +34,15 @@ console.log("Ejecutando JS...");
     video.muted=false;
     console.log("manual");
   };
+
+  video1.onclick = () => {
+  console.log("Video 1");
+    video.poster = false;
+    video.src = video1.src;
+    video.muted = false;
+    video1.style.border = "doted";
+    video2.style.border = "none";
+    video3.style.border = "none";
+    imgprueba.style.border = "none";
+
+};
