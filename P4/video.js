@@ -30,7 +30,7 @@ console.log("Ejecutando JS...");
     video.poster = false;
     video.src = video1.src;
     video.muted = false;
-    video1.style.border = "doted #000000 5px";
+    video1.style.border = "doted solid white";
     video2.style.border = "none";
     video3.style.border = "none";
     imgprueba.style.border = "none";
