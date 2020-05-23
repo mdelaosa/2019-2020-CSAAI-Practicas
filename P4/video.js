@@ -30,7 +30,7 @@ console.log("Ejecutando JS...");
     video.poster = false;
     video.src = video1.src;
     video.muted = false;
-    video1.style.border = "doted";
+    video1.style.border = "doted #000000 5px";
     video2.style.border = "none";
     video3.style.border = "none";
     imgprueba.style.border = "none";
@@ -71,34 +71,3 @@ console.log("Ejecutando JS...");
     imgprueba.style.border = "doted";
 
   };
-
-  loop.onclick = () => {
-  console.log('Modo bucle');
-  loop.style.border = '5px solid blue';
-  noloop.style.border = '5px solid black';
-  display.currentTime = init;
-  sloop = true;
-}
-
-const loop = document.getElementById("loop");
-const init = 2;
-const finish = init + 2;
-loop.onclick = () => {
-  video.loop = true;
-  video.currentTime = init;
-  console.log("loop");
-};
-
-var manual = document.getElementById("manual");
-manual.onclick = () => {
-  video.muted = false;
-  console.log("manual");
-};
-
-setInterval(()=>{
-  if(loop){
-    if (display.currentTime > finish){
-        display.currentTime = init;
-    }
-  }
-},10);
