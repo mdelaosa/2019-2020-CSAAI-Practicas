@@ -25,6 +25,12 @@ console.log("Ejecutando JS...");
   imgprueba.width=300;
   const prueba = document.getElementById('prueba'); //-- Botón para seleccionar
 
+  const loop = document.getElementById("loop");
+  const noloop = document.getElementById("noloop");
+  var bucle = false;
+  const inicio = 2;
+  const fin = 4;
+
   vid1.onclick = () => {
   console.log("Video 1");
     video.poster = false;
@@ -71,3 +77,27 @@ console.log("Ejecutando JS...");
     imgprueba.style.border = "dotted #0a0a0a 5px";
 
   };
+
+  setInterval(()=>{
+  if(bucle){
+    if (display.currentTime > fin){
+        display.currentTime = inicio;
+    }
+  }
+},10); //-- timer
+
+loop.onclick = () => {
+  console.log('Bucle');
+  loop.style.border = "dotted #0a0a0a 5px";
+  noloop.style.border = "none";
+  display.currentTime = init;
+  bucle = true;
+}
+
+noloop.onclick = () => {
+  console.log('Normal');
+  loop.style.border = "none";
+  noloop.style.border = "dotted #0a0a0a 5px";
+  display.currentTime = init;
+  bucle = false;
+}
