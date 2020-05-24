@@ -9,3 +9,4 @@ Mejoras:
 - Máquina de estados.
 - Uso del número pi.
 - Uso de la raíz cuadrada.
+- Sonido por cada tecla de la calculadora
