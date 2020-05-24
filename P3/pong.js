@@ -18,8 +18,9 @@ const sonido_rebote = new Audio("audio.mp3");
 const ESTADO = {
   INIT: 0,
   SAQUE: 1,
-  JUGANDO: 2,
-  GANAR: 3,
+  SAQUE2: 2,
+  JUGANDO: 3,
+  GANAR: 4,
 }
 
 //-- Variable de estado
@@ -124,7 +125,7 @@ function animacion()
     sonido_rebote.currentTime = 0.45;
     sonido_rebote.play();
     Point1++;
-    estado = ESTADO.SAQUE;
+    estado = ESTADO.SAQUE2;
     bola.init();
     console.log("RACHEL: IT WASN'T A BREAK");
     if (Point1 > Point2 && Point1 == 3){
@@ -189,15 +190,19 @@ window.onkeydown = (e) => {
 
   switch (e.key) {
     case "a":
+    case "A":
       raqI.v = raqI.v_ini;
       break;
     case "q":
+    case "Q":
       raqI.v = raqI.v_ini * -1;
       break;
     case "p":
+    case "P":
       raqD.v = raqD.v_ini * -1;
       break;
     case "l":
+    case "L":
       raqD.v = raqD.v_ini;
       break;
     case " ":
@@ -220,6 +225,23 @@ window.onkeydown = (e) => {
 
         return false;
       }
+      if (estado == ESTADO.SAQUE2) {
+        //-- Reproducir sonido
+        sonido_raqueta.currentTime = 0;
+        sonido_raqueta.play();
+
+        //-- Llevar bola a su posicion incicial
+        bola.init2();
+
+        //-- Darle velocidad
+        bola.vx = Math.floor(Math.random() * 6 - 3);
+        bola.vy = Math.floor(Math.random() * 5 + 1);
+
+        //-- Cambiar al estado de jugando!
+        estado = ESTADO.JUGANDO;
+
+        return false;
+      }
       if (estado == ESTADO.GANAR) {
         Point1 = 0;
         Point2 = 0;
@@ -233,9 +255,13 @@ window.onkeyup = (e) => {
   if (e.key == "a" || e.key == "q"){
     //-- Quitar velocidad de la raqueta
     raqI.v = 0;
+  }else if (e.key == "A" || e.key == "Q") {
+    raqI.v = 0;
   }
 
   if (e.key == "p" || e.key == "l") {
+    raqD.v = 0;
+  }else if (e.key == "P" || e.key == "L") {
     raqD.v = 0;
   }
 }

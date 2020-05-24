@@ -9,6 +9,8 @@ class Bola {
     //-- Contante: Posicion inicial de la bola
     this.x_ini = 100;
     this.y_ini = 200;
+    this.x_ini2 = 520;
+    this.y_ini2 = 200;
 
     //-- Posicion generica de la bola
     this.x = 0;
@@ -41,6 +43,13 @@ class Bola {
     //-- Inicializa la bola: A su posicion inicial
     this.x = this.x_ini;
     this.y = this.y_ini;
+    this.vx = 0;
+    this.vy = 0;
+  }
+
+  init2() {
+    this.x = this.x_ini2;
+    this.y = this.y_ini2;
     this.vx = 0;
     this.vy = 0;
   }
