@@ -3,28 +3,20 @@ body{
   background-color: #faf4d7b3;
 }
 
-div{
-  float: auto;
-  width: 300px;
+#calculator{
+  width: 600px;
   border-radius: 15px;
   margin: auto;
+  float: center;
 }
-#numbers{
-  float: left;
-  margin: auto;
-  width: 50%;
-}
-#operators{
-  margin: auto;
-  float: right;
-  width: 50%;
-}
+
 #equal{
-  width: 90px;
+  width: 95px;
 }
+
 input{
   margin: auto;
-  width: 135px;
+  width: 140px;
   height: 45px;
   background-color: rgba(227, 118, 35);
   color: #E0FFFF;
@@ -36,6 +28,7 @@ input:hover {
   background-color: #fd8e37;
   color: black;
 }
+
 button{
   width: 45px;
   height: 45px;
@@ -45,36 +38,35 @@ button{
   border-radius: 15px 5px 15px 5px;
   opacity: 0.7;
 }
-
 button:hover {
    background-color: #fd8e37;
    color: black;
 }
 
-#dis{
-  text-align: center;
-  float: center;
-  margin-left: auto;
-  margin-right: auto;
-  
-}
-
 p{
-  width: 600px;
+  width: 400px;
   height: 40px;
   border-color: black;
   background-color: #ff9933;
   opacity: 0.75;
-  color: black;
+  color: #5c2704;
   font-family: Verdana;
   font-size: 30px;
   border-radius: 15px 5px 15px 5px;
   text-align: right;
   margin: 25px;
+  float: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1{
+  font-family: 'Abril Fatface';
+  color: #7a370f;
 }
 
 img{
-  float: auto;
-  margin: left;
-  width: 100%;
+  float: center;
+  margin: auto;
+  width: 40%;
 }
