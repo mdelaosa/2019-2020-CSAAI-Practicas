@@ -2,8 +2,11 @@
 body {
     background-color: black;
 }
-#titulo{
+h1{
   margin: auto;
+  color: #ffca08;
+  font-family: 'Abril Fatface';
+  font-size: 40px;
 }
 
 /* Estilo para el canvas: Negro */
