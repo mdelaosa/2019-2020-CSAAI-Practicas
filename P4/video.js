@@ -28,8 +28,8 @@ console.log("Ejecutando JS...");
   const loop = document.getElementById("loop");
   const noloop = document.getElementById("noloop");
   var bucle = false;
-  const inicio = 2;
-  const fin = 4;
+  const inicio = 3;
+  const fin = 5;
 
   vid1.onclick = () => {
   console.log("Video 1");
@@ -79,18 +79,20 @@ console.log("Ejecutando JS...");
   };
 
   setInterval(()=>{
-  if(bucle){
-    if (video.currentTime > fin){
+    if(bucle){
+      if (video.currentTime > fin){
         video.currentTime = inicio;
+      }else if (video.currentTime < inicio) {
+        video.currentTime = inicio;
+      }
     }
-  }
-},10); //-- timer
+  },10);
 
 loop.onclick = () => {
   console.log('Bucle');
   loop.style.border = "dotted #0a0a0a 5px";
   noloop.style.border = "none";
-  video.currentTime = init;
+  video.currentTime = 2;
   bucle = true;
 }
 
@@ -98,6 +100,6 @@ noloop.onclick = () => {
   console.log('Normal');
   loop.style.border = "none";
   noloop.style.border = "dotted #0a0a0a 5px";
-  video.currentTime = init;
+  video.currentTime = 0;
   bucle = false;
 }
