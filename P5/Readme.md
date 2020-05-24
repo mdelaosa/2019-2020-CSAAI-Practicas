@@ -5,6 +5,7 @@ En esta práctica se ha implementado el procesado de imágenes.
 Se parte de la idea de la práctica original, para modificar los valores de los
 deslizadores, será necesario primero pulsar el botón RGB.
 Tiene las siguientes mejoras:
+- Deslizadores ocultos.
 - GRISES: convierte la imagen a escala de grises. En este caso no se pueden  
           modificar los deslizadores RGB.
 - ESPEJO HORIZONTAL: mueve la imagen con respecto al eje vertical, es decir
