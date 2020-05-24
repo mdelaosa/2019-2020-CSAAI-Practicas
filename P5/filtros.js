@@ -19,6 +19,7 @@ const rgb = document.getElementById('rgb');
 const grises = document.getElementById('grises');
 const espejo = document.getElementById('espejo');
 const abajo = document.getElementById('abajo');
+const negativo = document.getElementById('negativo');
 
 //-- Acceso al deslizador
 const deslizadorR = document.getElementById('deslizadorR');
@@ -124,6 +125,24 @@ abajo.onclick = () => {
   ctx.translate(0, canvas.height);
   ctx.scale(1, -1);
   ctx.drawImage(img, 0, 0);
+}
+
+negativo.onclick = () => {
+  console.log("Modo negativo");
+  ctx.drawImage(img, 0,0);
+  let imgData = ctx.getImageData(0,0,canvas.width, canvas.height);
+  let data = imgData.data;
+  for (let i = 0; i < data.length; i+=4) {
+    red = 255 - data[i];
+    green = 255 - data[i+1];
+    blue = 255 - data[i+2];
+
+    data[i] = red;
+    data[i+1] = green;
+    data[i+2] = blue;
+  }
+  //--Poner la imagen modificada en el canvas
+  ctx.putImageData(imgData, 0,0);
 }
 
 console.log("Fin...");
