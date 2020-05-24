@@ -212,8 +212,8 @@ window.onkeydown = (e) => {
         bola.init();
 
         //-- Darle velocidad
-        bola.vx = bola.vx_ini;
-        bola.vy = bola.vy_ini;
+        bola.vx = Math.floor(Math.random() * 6 + 3);
+        bola.vy = Math.floor(Math.random() * 5 + 1);
 
         //-- Cambiar al estado de jugando!
         estado = ESTADO.JUGANDO;
