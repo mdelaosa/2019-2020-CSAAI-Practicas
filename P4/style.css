@@ -1,3 +1,9 @@
+h1{
+  font-family: 'Abril Fatface';
+  color: rgba(10, 10, 10, 0.9);
+  font-size: 40px;
+}
+
 button{
   width: 80px;
   height: 45px;
