@@ -80,8 +80,8 @@ console.log("Ejecutando JS...");
 
   setInterval(()=>{
   if(bucle){
-    if (display.currentTime > fin){
-        display.currentTime = inicio;
+    if (video.currentTime > fin){
+        video.currentTime = inicio;
     }
   }
 },10); //-- timer
@@ -90,7 +90,7 @@ loop.onclick = () => {
   console.log('Bucle');
   loop.style.border = "dotted #0a0a0a 5px";
   noloop.style.border = "none";
-  display.currentTime = init;
+  video.currentTime = init;
   bucle = true;
 }
 
@@ -98,6 +98,6 @@ noloop.onclick = () => {
   console.log('Normal');
   loop.style.border = "none";
   noloop.style.border = "dotted #0a0a0a 5px";
-  display.currentTime = init;
+  video.currentTime = init;
   bucle = false;
 }
