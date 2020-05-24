@@ -16,5 +16,6 @@ Uso:
 Mejoras:
 - Sonidos en los choques de las raquetas.
 - Sonidos cuando se mete punto.
+- Saca quien pierde.
 - Saque/Velocidad de la bola aleatoria.
 - El primer jugador en llegar a 3, descubrirá la respuesta a esa famosa pregunta.
