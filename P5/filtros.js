@@ -26,6 +26,7 @@ const deslizadorR = document.getElementById('deslizadorR');
 const deslizadorV = document.getElementById('deslizadorV');
 const deslizadorA = document.getElementById('deslizadorA');
 const deslizadores = document.getElementById('deslizadores');
+deslizadores.style.display = "none";
 
 //-- Valor del deslizador
 const valueR = document.getElementById('valueR');
@@ -84,7 +85,7 @@ function Valores_RGB(){
 
 rgb.onclick = () => {
   console.log("Umbrales de color");
-  deslizadores.style.display = "block";
+  deslizadores.style.display = "flex";
   ctx.drawImage(img, 0,0);
     deslizadorR.oninput = () => {
        Valores_RGB();

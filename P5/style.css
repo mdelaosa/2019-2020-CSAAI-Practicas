@@ -31,7 +31,7 @@ button:hover {
 
 #deslizadores{
  display:flex;
- text-indent: 5em;
+ text-indent: 2em;
  justify-content: center;
  margin-left: auto;
  margin-right: auto;
