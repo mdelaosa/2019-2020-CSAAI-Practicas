@@ -6,9 +6,12 @@
  c = document.getElementById("c");
  sqrt = document.getElementById("sqrt");
 
- // Digitos y operadores
+ //-- Digitos y operadores
  let digit = document.getElementsByClassName("digit");
  let operator = document.getElementsByClassName("operator");
+
+ //-- Sonido
+ const sonido = new Audio("click.mp3");
 
  //-- Estados de la calculadora
 const ESTADO = {
@@ -53,23 +56,27 @@ const ESTADO = {
     }else if (estado == ESTADO.OP2){
       display.innerHTML += num;
     }
+    sonido.play();
   }
 
   function operators(operat){
-  if (estado != ESTADO.OPERATION) {
-    display.innerHTML += operat;
-    estado = ESTADO.OPERATION;
-  }
+    if (estado != ESTADO.OPERATION) {
+      display.innerHTML += operat;
+      estado = ESTADO.OPERATION;
+    }
+    sonido.play();
 }
 
   // Igual
   equal.onclick = () => {
     display.innerHTML = eval(display.innerHTML);
+    sonido.play();
   }
 
   // Borrar todo
  c.onclick = () => {
    display.innerHTML = "";
+   sonido.play();
  }
 
 // Borrar lo ultimo añadido
@@ -79,9 +86,11 @@ const ESTADO = {
    }else{
      display.innerHTML = display.innerHTML.slice(0,-1);
    }
+   sonido.play();
  }
 
  // Raiz
  sqrt.onclick = () => {
   display.innerHTML = Math.sqrt(display.innerHTML);
+  sonido.play();
 }
