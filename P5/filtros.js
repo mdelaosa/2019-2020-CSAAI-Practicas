@@ -84,7 +84,7 @@ function Valores_RGB(){
 
 rgb.onclick = () => {
   console.log("Umbrales de color");
-  slide.style.display = "block";
+  deslizadores.style.display = "block";
   ctx.drawImage(img, 0,0);
     deslizadorR.oninput = () => {
        Valores_RGB();
@@ -102,7 +102,7 @@ rgb.onclick = () => {
 
 grises.onclick = () => {
   console.log("Umbrales de gris");
-  slide.style.display = "none";
+  deslizadores.style.display = "none";
   ctx.drawImage(img, 0,0);
   let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
   let data = imgData.data;
@@ -116,7 +116,7 @@ grises.onclick = () => {
 
 espejo.onclick = () => {
   console.log("Modo espejo horizontal");
-  slide.style.display = "none";
+  deslizadores.style.display = "none";
   ctx.drawImage(img, 0,0);
   ctx.translate(canvas.width, 0);
   ctx.scale(-1, 1);
@@ -125,7 +125,7 @@ espejo.onclick = () => {
 
 abajo.onclick = () => {
   console.log("Modo espejo horizontal");
-  slide.style.display = "none";
+  deslizadores.style.display = "none";
   ctx.drawImage(img, 0,0);
   ctx.translate(0, canvas.height);
   ctx.scale(1, -1);
@@ -134,7 +134,7 @@ abajo.onclick = () => {
 
 negativo.onclick = () => {
   console.log("Modo negativo");
-  slide.style.display = "none";
+  deslizadores.style.display = "none";
   ctx.drawImage(img, 0,0);
   let imgData = ctx.getImageData(0,0,canvas.width, canvas.height);
   let data = imgData.data;
